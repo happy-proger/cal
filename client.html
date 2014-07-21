@@ -1,0 +1,63 @@
+        <template name="month">
+          <h1>mtest</h1>
+          
+          <div>
+          {{getArrayByWeek}}
+          </div>    
+          <table class = "table table-bordered">
+          <thead>
+              <h4>Header</h4>
+          </thead>
+          <tbody>
+              {{#each getArrayByWeek}}
+                <tr>
+                    {{#each this}}
+                        {{> day}}
+                    {{/each}}
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          
+          <input type="button" value="Cclick" />
+        </template>
+        
+        <template name = "day">
+            <td class = "day" id = {{formatted}} >
+                
+                            <p>Year:{{year}}</p>
+                            <p>month:{{month}}</p>
+                            <p>day:{{dotw}}</p>
+                            <p>num:{{dotm}}</p>
+                            <p>test:{{test}}</p>
+                            <p>formatted:{{formatted}}</p>
+            </td>
+        </template>
+        
+        <template name = "days">
+        <div class="container">
+            <table class = "table table-bordered">
+          <thead>
+              <h4>Header</h4>
+          </thead>
+          <tbody>
+                  {{#each list}}
+                <tr>
+                <td>
+                
+                        {{> dcit}}
+                    
+                </td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          </div>
+          
+        </template>
+        
+        <template name = "dcit">
+            <a>date:{{date}}</a>
+            <a>type:{{type}}</a>
+            <a>cit_id:{{cit_id}}</a>
+        </template>
