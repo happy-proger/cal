@@ -1,0 +1,54 @@
+<head>
+  <title>cal</title>
+</head>
+
+<body>
+ <div class="container">
+  {{> files}}
+ </div>
+ <div class = "container" >
+    {{> day_edit}}    
+ </div>
+ 
+</body>
+
+
+<template name="index">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+</template>
+
+<template name="day_edit">
+    <div class="modal" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+            <p>Date: {{date}}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</template>
+
+<template name="files">
+    <div class="container">
+        <div class="container">
+            <div class = "col-md-6">
+                <p class = "well imageArea">
+                    <h4>Image upload</h4>
+                </p>
+            </div>
+            <input type="file" id="imageInput">
+        </div>
+    </div>
+</template>
